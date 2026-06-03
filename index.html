@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>API, DRF & FastAPI | Премиальная презентация</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bgCanvas3D"></canvas>
+    
+    <div class="cursor-glow"></div>
+    
+    <div class="presentation-wrapper">
+        <div class="top-bar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-line">API</span>
+                    <span class="logo-line-glow">Masterclass</span>
+                </div>
+            </div>
+            
+            <div class="slide-info">
+                <div class="slide-progress-ring">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <circle class="ring-bg" cx="20" cy="20" r="16" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+                        <circle class="ring-progress" id="ringProgress" cx="20" cy="20" r="16" fill="none" stroke="url(#ringGradient)" stroke-width="2" stroke-dasharray="100.53" stroke-dashoffset="0" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#6366f1"/>
+                                <stop offset="50%" stop-color="#a855f7"/>
+                                <stop offset="100%" stop-color="#ec4899"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="slide-number-text" id="currentSlideRing">01</span>
+                </div>
+                <div class="slide-total-info">
+                    <span class="slide-total-label">СЛАЙД</span>
+                    <span class="slide-total-value" id="totalSlides">10</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slides-container" id="slidesContainer">
+            <div class="slides-track" id="slidesTrack">
+                <iframe src="pages/page1.html" class="slide-frame" data-slide="1"></iframe>
+                <iframe src="pages/page2.html" class="slide-frame" data-slide="2"></iframe>
+                <iframe src="pages/page3.html" class="slide-frame" data-slide="3"></iframe>
+                <iframe src="pages/page4.html" class="slide-frame" data-slide="4"></iframe>
+                <iframe src="pages/page5.html" class="slide-frame" data-slide="5"></iframe>
+                <iframe src="pages/page6.html" class="slide-frame" data-slide="6"></iframe>
+                <iframe src="pages/page7.html" class="slide-frame" data-slide="7"></iframe>
+                <iframe src="pages/page8.html" class="slide-frame" data-slide="8"></iframe>
+                <iframe src="pages/page9.html" class="slide-frame" data-slide="9"></iframe>
+                <iframe src="pages/page10.html" class="slide-frame" data-slide="10"></iframe>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <button class="nav-btn prev-btn" id="prevBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Назад</span>
+            </button>
+            
+            <div class="nav-progress">
+                <div class="nav-progress-bar">
+                    <div class="nav-progress-fill" id="navProgressFill"></div>
+                </div>
+                <div class="nav-dots" id="navDots"></div>
+            </div>
+            
+            <button class="nav-btn next-btn" id="nextBtn">
+                <span>Вперед</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <div class="keyboard-hint">
+            <div class="hint-keys">
+                <kbd>←</kbd>
+                <kbd>→</kbd>
+            </div>
+            <span>навигация</span>
+        </div>
+        
+        <div class="slide-map" id="slideMap">
+            <div class="slide-map-toggle">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="2"/>
+                    <line x1="8" y1="2" x2="8" y2="22"/>
+                    <line x1="16" y1="2" x2="16" y2="22"/>
+                    <line x1="2" y1="8" x2="22" y2="8"/>
+                    <line x1="2" y1="16" x2="22" y2="16"/>
+                </svg>
+            </div>
+            <div class="slide-map-content" id="slideMapContent"></div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

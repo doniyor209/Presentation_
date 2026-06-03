@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django REST Framework | Презентация</title>
+    <link rel="stylesheet" href="../css/page6.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Световые акценты -->
+    <div class="light-accent accent-1"></div>
+    <div class="light-accent accent-2"></div>
+    <div class="light-accent accent-3"></div>
+    
+    <div class="page-container">
+        <!-- Верхняя навигация -->
+        <div class="page-nav">
+            <div class="page-number">06</div>
+            <div class="page-title">
+                <span class="title-icon">🐍</span>
+                <span>Django REST Framework</span>
+            </div>
+            <div class="page-progress">
+                <div class="progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основной контент -->
+        <div class="content-wrapper">
+            <!-- Заголовок -->
+            <div class="header-section">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    <span>POWERFUL WEB API TOOLKIT</span>
+                </div>
+                <h1 class="main-title">
+                    <span class="gradient-text">Django REST</span>
+                    <span class="title-break">Framework</span>
+                    <span class="title-cursor"></span>
+                </h1>
+                <p class="main-subtitle">Мощный и гибкий инструмент для создания веб-API на основе Django</p>
+                <div class="title-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="4"/>
+                            <path d="M7 7h3v3H7zM14 7h3v3h-3zM7 14h3v3H7zM14 14h3v3h-3z"/>
+                        </svg>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <!-- Введение в DRF -->
+            <div class="intro-section glass-card">
+                <div class="intro-logo">
+                    <div class="logo-bg">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <rect x="2" y="2" width="20" height="20" rx="4"/>
+                            <path d="M7 7h3v3H7zM14 7h3v3h-3zM7 14h3v3H7zM14 14h3v3h-3z"/>
+                            <circle cx="19.5" cy="4.5" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="version-badge">v3.15+</div>
+                </div>
+                <div class="intro-content">
+                    <h3>Что такое Django REST Framework?</h3>
+                    <p>Django REST Framework (DRF) — это мощный и гибкий инструментарий для создания веб-API на основе Django. Он предоставляет полноценный набор функций для быстрой разработки RESTful сервисов, включая сериализацию, аутентификацию, права доступа и многое другое.</p>
+                    <div class="intro-stats">
+                        <div class="stat-badge">
+                            <span class="stat-number">30k+</span>
+                            <span class="stat-label">GitHub Stars</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-number">1M+</span>
+                            <span class="stat-label">Загрузок/месяц</span>
+                        </div>
+                        <div class="stat-badge">
+                            <span class="stat-number">8k+</span>
+                            <span class="stat-label">Компаний используют</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- История создания -->
+            <div class="history-section">
+                <div class="section-title-small">
+                    <span class="title-icon-small">📜</span>
+                    <h3>История создания</h3>
+                </div>
+                <div class="timeline" id="timeline">
+                    <div class="timeline-item" data-year="2011">
+                        <div class="timeline-year">2011</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">🚀</div>
+                            <h4>Рождение DRF</h4>
+                            <p>Создан Томом Кристи как проект с открытым исходным кодом для Django</p>
+                        </div>
+                    </div>
+                    <div class="timeline-arrow">→</div>
+                    <div class="timeline-item" data-year="2013">
+                        <div class="timeline-year">2013</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">🏛️</div>
+                            <h4>Принятие DSF</h4>
+                            <p>Принят Django Software Foundation как официальный проект</p>
+                        </div>
+                    </div>
+                    <div class="timeline-arrow">→</div>
+                    <div class="timeline-item" data-year="2017">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">⭐</div>
+                            <h4>Популярность</h4>
+                            <p>Достиг 10k звезд на GitHub, стал стандартом для Django API</p>
+                        </div>
+                    </div>
+                    <div class="timeline-arrow">→</div>
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">🌍</div>
+                            <h4>Мировое признание</h4>
+                            <p>30k+ звезд, 1M+ загрузок в месяц, используется по всему миру</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Архитектура DRF -->
+            <div class="architecture-section">
+                <div class="section-title-small">
+                    <span class="title-icon-small">🏗️</span>
+                    <h3>Архитектура DRF</h3>
+                </div>
+                <div class="architecture-diagram" id="architectureDiagram">
+                    <div class="arch-layer">
+                        <div class="arch-layer-title">Request →</div>
+                        <div class="arch-components">
+                            <div class="arch-component">URLs</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-component">ViewSets</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-component">Serializers</div>
+                            <div class="arch-arrow">→</div>
+                            <div class="arch-component">Models</div>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <div class="arch-layer-title">← Response</div>
+                        <div class="arch-components reverse">
+                            <div class="arch-component">Response</div>
+                            <div class="arch-arrow">←</div>
+                            <div class="arch-component">Serializer</div>
+                            <div class="arch-arrow">←</div>
+                            <div class="arch-component">Data</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Примеры использования -->
+            <div class="examples-section">
+                <div class="section-title-small">
+                    <span class="title-icon-small">💻</span>
+                    <h3>Примеры использования</h3>
+                </div>
+                <div class="code-examples">
+                    <div class="code-card">
+                        <div class="code-header">
+                            <div class="code-title">
+                                <span class="code-icon">📦</span>
+                                <span>serializers.py</span>
+                            </div>
+                            <button class="copy-code-btn" data-code="serializer">Копировать</button>
+                        </div>
+                        <pre class="code-block" id="serializerCode"><code>from rest_framework import serializers
+from .models import User
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email', 'created_at']
+    
+    def validate_email(self, value):
+        if not value.endswith('@example.com'):
+            raise serializers.ValidationError("Email must be from example.com")
+        return value</code></pre>
+                    </div>
+                    
+                    <div class="code-card">
+                        <div class="code-header">
+                            <div class="code-title">
+                                <span class="code-icon">👁️</span>
+                                <span>views.py</span>
+                            </div>
+                            <button class="copy-code-btn" data-code="views">Копировать</button>
+                        </div>
+                        <pre class="code-block" id="viewsCode"><code>from rest_framework import viewsets, permissions
+from .models import User
+from .serializers import UserSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+            return User.objects.all()
+        return User.objects.filter(id=user.id)</code></pre>
+                    </div>
+                    
+                    <div class="code-card">
+                        <div class="code-header">
+                            <div class="code-title">
+                                <span class="code-icon">🔗</span>
+                                <span>urls.py</span>
+                            </div>
+                            <button class="copy-code-btn" data-code="urls">Копировать</button>
+                        </div>
+                        <pre class="code-block" id="urlsCode"><code>from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import UserViewSet
+
+router = DefaultRouter()
+router.register(r'users', UserViewSet)
+
+urlpatterns = [
+    path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls'))
+]</code></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ключевые возможности -->
+            <div class="features-section">
+                <div class="section-title-small">
+                    <span class="title-icon-small">⚡</span>
+                    <h3>Ключевые возможности DRF</h3>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-content">
+                            <h4>Serializers</h4>
+                            <p>Преобразование сложных данных (ORM) в JSON/XML и обратно с валидацией</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔐</div>
+                        <div class="feature-content">
+                            <h4>Authentication</h4>
+                            <p>Token, Session, JWT, OAuth2 — множество встроенных методов аутентификации</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-content">
+                            <h4>Permissions</h4>
+                            <p>Гибкая система прав доступа на уровне запросов и объектов</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌐</div>
+                        <div class="feature-content">
+                            <h4>Browsable API</h4>
+                            <p>Интерактивная HTML-документация прямо в браузере для тестирования API</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📦</div>
+                        <div class="feature-content">
+                            <h4>ViewSets & Routers</h4>
+                            <p>Автоматическая генерация URL-маршрутов и CRUD операций минимальным кодом</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📝</div>
+                        <div class="feature-content">
+                            <h4>Pagination & Filtering</h4>
+                            <p>Встроенная пагинация, фильтрация и сортировка данных</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижний индикатор -->
+        <div class="bottom-indicator">
+            <div class="indicator-text">DRF — стандарт для Django API</div>
+            <div class="indicator-line"></div>
+        </div>
+    </div>
+    
+    <script src="../js/page6.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как работает API? | Презентация</title>
+    <link rel="stylesheet" href="../css/page4.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Световые акценты -->
+    <div class="light-accent accent-1"></div>
+    <div class="light-accent accent-2"></div>
+    <div class="light-accent accent-3"></div>
+    
+    <div class="page-container">
+        <!-- Верхняя навигация -->
+        <div class="page-nav">
+            <div class="page-number">04</div>
+            <div class="page-title">
+                <span class="title-icon">⚙️</span>
+                <span>Как работает API</span>
+            </div>
+            <div class="page-progress">
+                <div class="progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основной контент -->
+        <div class="content-wrapper">
+            <!-- Заголовок -->
+            <div class="header-section">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 8v4l3 3"/>
+                    </svg>
+                    <span>HOW IT WORKS</span>
+                </div>
+                <h1 class="main-title">
+                    Как работает 
+                    <span class="gradient-text">API</span>
+                    <span class="title-cursor">?</span>
+                </h1>
+                <p class="main-subtitle">Путь запроса от клиента до сервера и обратно</p>
+                <div class="title-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16v16H4z"/>
+                            <path d="M9 8h6"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <!-- Интерактивная схема работы API -->
+            <div class="schema-container">
+                <div class="schema-title">
+                    <span class="schema-icon">🔄</span>
+                    <span>Жизненный цикл API запроса</span>
+                </div>
+                
+                <div class="schema-flow" id="schemaFlow">
+                    <!-- Клиент -->
+                    <div class="flow-node client-node" data-step="1">
+                        <div class="node-glow"></div>
+                        <div class="node-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div class="node-title">1. Клиент</div>
+                        <div class="node-desc">Браузер, приложение или устройство инициирует запрос</div>
+                        <div class="node-badge">HTTP/HTTPS</div>
+                    </div>
+                    
+                    <div class="flow-arrow arrow-1">
+                        <div class="arrow-line"></div>
+                        <div class="arrow-head"></div>
+                        <div class="arrow-label">Запрос</div>
+                    </div>
+                    
+                    <!-- API Шлюз -->
+                    <div class="flow-node gateway-node" data-step="2">
+                        <div class="node-glow"></div>
+                        <div class="node-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div class="node-title">2. API Шлюз</div>
+                        <div class="node-desc">Аутентификация, маршрутизация, rate limiting</div>
+                        <div class="node-badge">Gateway</div>
+                    </div>
+                    
+                    <div class="flow-arrow arrow-2">
+                        <div class="arrow-line"></div>
+                        <div class="arrow-head"></div>
+                        <div class="arrow-label">Обработка</div>
+                    </div>
+                    
+                    <!-- Сервер -->
+                    <div class="flow-node server-node" data-step="3">
+                        <div class="node-glow"></div>
+                        <div class="node-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="2"/>
+                                <path d="M7 7h3v3H7z"/>
+                                <path d="M14 7h3v3h-3z"/>
+                            </svg>
+                        </div>
+                        <div class="node-title">3. Backend Сервер</div>
+                        <div class="node-desc">Бизнес-логика, база данных, вычисления</div>
+                        <div class="node-badge">Django/FastAPI</div>
+                    </div>
+                    
+                    <div class="flow-arrow arrow-3">
+                        <div class="arrow-line"></div>
+                        <div class="arrow-head"></div>
+                        <div class="arrow-label">Ответ</div>
+                    </div>
+                    
+                    <!-- Ответ -->
+                    <div class="flow-node response-node" data-step="4">
+                        <div class="node-glow"></div>
+                        <div class="node-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16v16H4z"/>
+                                <path d="M9 8h6"/>
+                                <path d="M9 12h6"/>
+                            </svg>
+                        </div>
+                        <div class="node-title">4. Ответ клиенту</div>
+                        <div class="node-desc">JSON/XML данные, статус код, заголовки</div>
+                        <div class="node-badge">200 OK</div>
+                    </div>
+                </div>
+                
+                <!-- Детальное описание шагов -->
+                <div class="steps-detail" id="stepsDetail">
+                    <div class="step-card active" data-step="1">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h4>Клиент инициирует запрос</h4>
+                            <p>Приложение отправляет HTTP запрос к API endpoint'у с необходимыми параметрами, заголовками и телом запроса.</p>
+                            <div class="step-code">
+                                <span class="code-method">GET</span>
+                                <span class="code-url">https://api.example.com/users/123</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-step="2">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h4>API Gateway обрабатывает запрос</h4>
+                            <p>Проверяет API ключ, JWT токен, ограничивает частоту запросов, маршрутизирует к нужному микросервису.</p>
+                            <div class="step-code">
+                                <span class="code-method">Auth</span>
+                                <span class="code-url">Bearer token validation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-step="3">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h4>Backend выполняет бизнес-логику</h4>
+                            <p>Сервер обрабатывает запрос, взаимодействует с базой данных, выполняет вычисления и формирует ответ.</p>
+                            <div class="step-code">
+                                <span class="code-method">SQL</span>
+                                <span class="code-url">SELECT * FROM users WHERE id = 123</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-step="4">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h4>Возврат ответа клиенту</h4>
+                            <p>API формирует JSON/XML ответ, добавляет статус код (200, 404, 500) и отправляет обратно клиенту.</p>
+                            <div class="step-code">
+                                <span class="code-method">200 OK</span>
+                                <span class="code-url">{ "id": 123, "name": "John" }</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Интерактивная демонстрация -->
+            <div class="demo-section glass-card">
+                <div class="demo-header">
+                    <div class="demo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                    </div>
+                    <span>Интерактивная демонстрация запроса</span>
+                    <div class="demo-badge">
+                        <span class="badge-dot"></span>
+                        Попробуй сам
+                    </div>
+                </div>
+                
+                <div class="demo-controls">
+                    <div class="method-selector">
+                        <button class="method-btn active" data-method="GET">GET</button>
+                        <button class="method-btn" data-method="POST">POST</button>
+                        <button class="method-btn" data-method="PUT">PUT</button>
+                        <button class="method-btn" data-method="DELETE">DELETE</button>
+                    </div>
+                    
+                    <div class="endpoint-input">
+                        <span class="endpoint-label">Endpoint:</span>
+                        <input type="text" class="endpoint-field" id="endpoint" value="https://jsonplaceholder.typicode.com/posts/1">
+                    </div>
+                    
+                    <button class="send-btn" id="sendRequest">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                        Отправить запрос
+                    </button>
+                </div>
+                
+                <div class="response-area" id="responseArea">
+                    <div class="response-header">
+                        <div class="response-tabs">
+                            <span class="response-tab active" data-tab="response">Ответ</span>
+                            <span class="response-tab" data-tab="headers">Заголовки</span>
+                            <span class="response-tab" data-tab="timing">Время</span>
+                        </div>
+                        <div class="status-code" id="statusCode">
+                            <span class="status-dot"></span>
+                            Ожидание запроса
+                        </div>
+                    </div>
+                    <div class="response-body" id="responseBody">
+                        <div class="placeholder-content">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 8v4l3 3"/>
+                            </svg>
+                            <p>Нажмите "Отправить запрос", чтобы увидеть<br>реальный ответ от API</p>
+                            <small>Используется JSONPlaceholder API для демонстрации</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Индикатор загрузки -->
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="spinner"></div>
+                    <span>Отправка запроса...</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижний индикатор -->
+        <div class="bottom-indicator">
+            <div class="indicator-text">API — мост между приложениями</div>
+            <div class="indicator-line"></div>
+        </div>
+    </div>
+    
+    <script src="../js/page4.js"></script>
+</body>
+</html>

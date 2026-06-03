@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнение DRF и FastAPI | Презентация</title>
+    <link rel="stylesheet" href="../css/page9.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Световые акценты -->
+    <div class="light-accent accent-1"></div>
+    <div class="light-accent accent-2"></div>
+    <div class="light-accent accent-3"></div>
+    
+    <div class="page-container">
+        <!-- Верхняя навигация -->
+        <div class="page-nav">
+            <div class="page-number">09</div>
+            <div class="page-title">
+                <span class="title-icon">⚖️</span>
+                <span>Сравнение DRF vs FastAPI</span>
+            </div>
+            <div class="page-progress">
+                <div class="progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основной контент -->
+        <div class="content-wrapper">
+            <!-- Заголовок -->
+            <div class="header-section">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 12H4M12 4v16"/>
+                    </svg>
+                    <span>COMPARISON</span>
+                </div>
+                <h1 class="main-title">
+                    <span class="gradient-text drf-grad">DRF</span>
+                    <span class="vs">vs</span>
+                    <span class="gradient-text fastapi-grad">FastAPI</span>
+                    <span class="title-cursor"></span>
+                </h1>
+                <p class="main-subtitle">Сравнение двух мощных фреймворков для создания API на Python</p>
+                <div class="title-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <!-- Сравнительная таблица -->
+            <div class="comparison-section glass-card">
+                <div class="table-header">
+                    <div class="col-feature">Характеристика</div>
+                    <div class="col-drf">
+                        <div class="logo-wrapper">
+                            <span class="logo-icon">🐍</span>
+                            <span>Django REST Framework</span>
+                        </div>
+                    </div>
+                    <div class="col-fastapi">
+                        <div class="logo-wrapper">
+                            <span class="logo-icon">⚡</span>
+                            <span>FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-body">
+                    <div class="table-row">
+                        <div class="col-feature">
+                            <span class="feature-icon">🚀</span>
+                            Скорость
+                        </div>
+                        <div class="col-drf">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐</span>
+                                <span class="rating-text">Средняя</span>
+                            </div>
+                            <div class="metric">~15-20k req/sec</div>
+                        </div>
+                        <div class="col-fastapi">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Очень высокая</span>
+                            </div>
+                            <div class="metric">~40k req/sec</div>
+                            <div class="badge">+100%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">
+                            <span class="feature-icon">📊</span>
+                            Производительность
+                        </div>
+                        <div class="col-drf">
+                            <div class="progress-bar-comp">
+                                <div class="progress-fill" style="width: 45%; background: linear-gradient(90deg, #a855f7, #c084fc);"></div>
+                            </div>
+                            <span class="metric-value">45%</span>
+                        </div>
+                        <div class="col-fastapi">
+                            <div class="progress-bar-comp">
+                                <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+                            </div>
+                            <span class="metric-value">100%</span>
+                            <div class="badge">Эталон</div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">
+                            <span class="feature-icon">📖</span>
+                            Простота изучения
+                        </div>
+                        <div class="col-drf">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐</span>
+                                <span class="rating-text">Требует Django</span>
+                            </div>
+                        </div>
+                        <div class="col-fastapi">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-text">Минимальный порог</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">
+                            <span class="feature-icon">📚</span>
+                            Документация
+                        </div>
+                        <div class="col-drf">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-text">Browsable API</span>
+                            </div>
+                        </div>
+                        <div class="col-fastapi">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Swagger/ReDoc auto</span>
+                            </div>
+                            <div class="badge">Интерактивная</div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">
+                            <span class="feature-icon">🔐</span>
+                            Безопасность
+                        </div>
+                        <div class="col-drf">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Зрелые решения</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">CSRF</span>
+                                <span class="tag">XSS</span>
+                                <span class="tag">SQL Injection</span>
+                            </div>
+                        </div>
+                        <div class="col-fastapi">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-text">Современные методы</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">OAuth2</span>
+                                <span class="tag">JWT</span>
+                                <span class="tag">CORS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">
+                            <span class="feature-icon">📈</span>
+                            Масштабируемость
+                        </div>
+                        <div class="col-drf">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-text">Монолит/Микросервисы</span>
+                            </div>
+                        </div>
+                        <div class="col-fastapi">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Async-first</span>
+                            </div>
+                            <div class="badge">Микросервисы</div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">
+                            <span class="feature-icon">⭐</span>
+                            Популярность
+                        </div>
+                        <div class="col-drf">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">30k+ GitHub ★</span>
+                            </div>
+                            <div class="metric">Зрелое сообщество</div>
+                        </div>
+                        <div class="col-fastapi">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">70k+ GitHub ★</span>
+                            </div>
+                            <div class="metric">Быстрый рост</div>
+                            <div class="badge">+150% за год</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Где лучше использовать -->
+            <div class="use-cases-section">
+                <div class="section-title-small">
+                    <span class="title-icon-small">🎯</span>
+                    <h3>Где лучше использовать?</h3>
+                </div>
+                <div class="use-cases-grid">
+                    <div class="use-case-card drf-case">
+                        <div class="case-header">
+                            <div class="case-icon">🐍</div>
+                            <h4>Django REST Framework</h4>
+                        </div>
+                        <ul class="case-list">
+                            <li>🏢 <strong>Крупные enterprise проекты</strong> — требующие стабильности и поддержки</li>
+                            <li>📝 <strong>CMS и админ панели</strong> — встроенная админка Django</li>
+                            <li>👥 <strong>Команды знакомые с Django</strong> — быстрый старт для Django-разработчиков</li>
+                            <li>🔧 <strong>Требуется ORM и админка</strong> — мощная ORM из коробки</li>
+                            <li>🔒 <strong>Высокие требования безопасности</strong> — проверенные временем решения</li>
+                        </ul>
+                        <div class="case-footer">
+                            <span class="case-badge">Идеален для монолитов</span>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card fastapi-case">
+                        <div class="case-header">
+                            <div class="case-icon">⚡</div>
+                            <h4>FastAPI</h4>
+                        </div>
+                        <ul class="case-list">
+                            <li>🔬 <strong>Микросервисная архитектура</strong> — легковесные и быстрые сервисы</li>
+                            <li>⚡ <strong>Высоконагруженные API</strong> — максимальная производительность</li>
+                            <li>🔄 <strong>Real-time приложения</strong> — асинхронность и WebSockets</li>
+                            <li>📱 <strong>Modern web приложения</strong> — современный стек технологий</li>
+                            <li>🤖 <strong>AI/ML сервисы</strong> — отличная интеграция с моделями</li>
+                        </ul>
+                        <div class="case-footer">
+                            <span class="case-badge">Идеален для микросервисов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Детальное сравнение -->
+            <div class="detail-section glass-card">
+                <div class="detail-header">
+                    <div class="detail-icon">📊</div>
+                    <h3>Детальное сравнение характеристик</h3>
+                    <span class="detail-badge">Технические детали</span>
+                </div>
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <div class="detail-name">Асинхронность</div>
+                        <div class="detail-drf">⚠️ Ограниченная (Django 3.1+)</div>
+                        <div class="detail-fastapi">✅ Нативная (async/await)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-name">Type Hints</div>
+                        <div class="detail-drf">⚠️ Опционально</div>
+                        <div class="detail-fastapi">✅ Обязательно (Pydantic)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-name">ORM</div>
+                        <div class="detail-drf">✅ Django ORM (мощный)</div>
+                        <div class="detail-fastapi">⚠️ SQLAlchemy (внешний)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-name">Admin Panel</div>
+                        <div class="detail-drf">✅ Встроенная админка</div>
+                        <div class="detail-fastapi">❌ Нет (только API)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-name">WebSockets</div>
+                        <div class="detail-drf">⚠️ Через Django Channels</div>
+                        <div class="detail-fastapi">✅ Нативная поддержка</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-name">GraphQL</div>
+                        <div class="detail-drf">✅ Graphene-Django</div>
+                        <div class="detail-fastapi">✅ Graphene + Starlette</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Вердикт -->
+            <div class="verdict-section">
+                <div class="verdict-card">
+                    <div class="verdict-icon">💡</div>
+                    <div class="verdict-content">
+                        <h3>Вердикт</h3>
+                        <p>Выбор между DRF и FastAPI зависит от конкретной задачи и контекста проекта. DRF — для быстрой разработки на Django с богатым функционалом и админкой. FastAPI — для максимальной производительности, микросервисной архитектуры и современных асинхронных приложений.</p>
+                        <div class="verdict-tags">
+                            <span class="verdict-tag drf-tag">DRF: Enterprise, CMS, Админка</span>
+                            <span class="verdict-tag fastapi-tag">FastAPI: Микросервисы, High-load, Real-time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижний индикатор -->
+        <div class="bottom-indicator">
+            <div class="indicator-text">DRF vs FastAPI — инструменты для разных задач</div>
+            <div class="indicator-line"></div>
+        </div>
+    </div>
+    
+    <script src="../js/page9.js"></script>
+</body>
+</html>

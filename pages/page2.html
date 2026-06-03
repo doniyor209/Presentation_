@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Что такое API? | Презентация</title>
+    <link rel="stylesheet" href="../css/page2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Световые акценты -->
+    <div class="light-accent accent-1"></div>
+    <div class="light-accent accent-2"></div>
+    <div class="light-accent accent-3"></div>
+    
+    <div class="page-container">
+        <!-- Верхняя навигация внутри страницы -->
+        <div class="page-nav">
+            <div class="page-number">02</div>
+            <div class="page-title">
+                <span class="title-icon">🔌</span>
+                <span>Основы API</span>
+            </div>
+            <div class="page-progress">
+                <div class="progress-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основной контент -->
+        <div class="content-wrapper">
+            <!-- Заголовок -->
+            <div class="header-section">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                    <span>FUNDAMENTALS</span>
+                </div>
+                <h1 class="main-title">
+                    Что такое 
+                    <span class="gradient-text">API</span>
+                    <span class="title-cursor">?</span>
+                </h1>
+                <div class="title-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16v16H4z"/>
+                            <path d="M9 8h6"/>
+                            <path d="M9 12h6"/>
+                            <path d="M9 16h4"/>
+                        </svg>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <!-- Определение API -->
+            <div class="definition-section glass-card">
+                <div class="definition-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                        <path d="M7 7h10"/>
+                    </svg>
+                </div>
+                <div class="definition-content">
+                    <h3>Application Programming Interface</h3>
+                    <p><span class="definition-highlight">API (Интерфейс программирования приложений)</span> — это набор правил, протоколов и инструментов, которые позволяют различным программным приложениям обмениваться данными и функциями друг с другом.</p>
+                    <div class="definition-tags">
+                        <span class="tag">Посредник</span>
+                        <span class="tag">Мост</span>
+                        <span class="tag">Интерфейс</span>
+                        <span class="tag">Протокол</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Примеры из жизни -->
+            <div class="examples-section">
+                <div class="examples-header">
+                    <h2>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                        Простые примеры из жизни
+                    </h2>
+                    <p class="examples-subtitle">Как API работает в реальном мире</p>
+                </div>
+                
+                <div class="examples-grid" id="examplesGrid">
+                    <div class="example-card" data-card="1">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">🍽️</div>
+                        <h3>Ресторан</h3>
+                        <p>Официант (API) передает ваш заказ (запрос) на кухню (сервер) и приносит еду (ответ). Вы не заходите на кухню сами — это роль API!</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">Клиент → API → Сервер</span>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card" data-card="2">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">🏦</div>
+                        <h3>Банкомат</h3>
+                        <p>API банка позволяет мобильным приложениям проверять баланс, переводить деньги и получать выписки без прямого доступа к базе данных.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">Защищенный доступ</span>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card" data-card="3">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">✈️</div>
+                        <h3>Поиск авиабилетов</h3>
+                        <p>Агрегаторы используют API авиакомпаний для получения актуальных цен, расписаний и наличия мест в реальном времени.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">Real-time данные</span>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card" data-card="4">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">🌤️</div>
+                        <h3>Погодное приложение</h3>
+                        <p>Приложение отправляет запрос к API погодного сервиса и получает JSON с температурой, влажностью, ветром и прогнозом на неделю.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">JSON формат</span>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card" data-card="5">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">💳</div>
+                        <h3>Платежный шлюз</h3>
+                        <p>Интернет-магазины используют API платежных систем (Stripe, PayPal) для обработки транзакций без хранения данных карт.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">Безопасные платежи</span>
+                        </div>
+                    </div>
+                    
+                    <div class="example-card" data-card="6">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">📱</div>
+                        <h3>Вход через соцсети</h3>
+                        <p>Сайты используют OAuth API Google/Facebook для аутентификации пользователей без создания новой учетной записи.</p>
+                        <div class="card-meta">
+                            <span class="meta-tag">OAuth 2.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Интерактивная демонстрация (улучшенная) -->
+            <div class="demo-section glass-card" id="demoSection">
+                <div class="demo-header">
+                    <div class="demo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                    </div>
+                    <span>Интерактивная демонстрация</span>
+                    <div class="demo-badge" id="demoBadge">
+                        <span class="badge-dot"></span>
+                        Нажми на карточку
+                    </div>
+                </div>
+                <div class="demo-content" id="demoContent">
+                    <div class="demo-placeholder">
+                        <div class="placeholder-glow"></div>
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v4l3 3"/>
+                        </svg>
+                        <p>Нажмите на любую карточку выше, чтобы увидеть,<br>как работает API в этом примере</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижний индикатор -->
+        <div class="bottom-indicator">
+            <div class="indicator-text">API — фундамент современной разработки</div>
+            <div class="indicator-line"></div>
+        </div>
+    </div>
+    
+    <script src="../js/page2.js"></script>
+</body>
+</html>

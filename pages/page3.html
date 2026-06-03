@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для чего нужен API? | Презентация</title>
+    <link rel="stylesheet" href="../css/page3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Световые акценты -->
+    <div class="light-accent accent-1"></div>
+    <div class="light-accent accent-2"></div>
+    <div class="light-accent accent-3"></div>
+    
+    <div class="page-container">
+        <!-- Верхняя навигация -->
+        <div class="page-nav">
+            <div class="page-number">03</div>
+            <div class="page-title">
+                <span class="title-icon">🎯</span>
+                <span>Назначение API</span>
+            </div>
+            <div class="page-progress">
+                <div class="progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основной контент -->
+        <div class="content-wrapper">
+            <!-- Заголовок -->
+            <div class="header-section">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 8v8M8 12h8"/>
+                    </svg>
+                    <span>WHY API?</span>
+                </div>
+                <h1 class="main-title">
+                    Для чего нужен 
+                    <span class="gradient-text">API</span>
+                    <span class="title-cursor">?</span>
+                </h1>
+                <p class="main-subtitle">API — это связующее звено, которое делает современный цифровой мир возможным</p>
+                <div class="title-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <!-- Цели API - основные карточки -->
+            <div class="purposes-section">
+                <div class="purposes-grid" id="purposesGrid">
+                    <div class="purpose-card glass-card" data-purpose="data">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="20" height="20" rx="2"/>
+                                    <path d="M8 7h8M8 12h6M8 17h4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Обмен данными</h3>
+                        <p>API позволяет приложениям безопасно обмениваться структурированными данными в форматах JSON, XML или Protobuf в реальном времени.</p>
+                        <div class="purpose-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">приложений</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">1B+</span>
+                                <span class="stat-label">запросов/день</span>
+                            </div>
+                        </div>
+                        <div class="purpose-tag">
+                            <span>JSON • XML • Protobuf</span>
+                        </div>
+                    </div>
+                    
+                    <div class="purpose-card glass-card" data-purpose="integration">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H5.78a1.65 1.65 0 0 0-1.51 1 1.65 1.65 0 0 0 .33 1.82l.04.04A10 10 0 0 0 12 17.66a10 10 0 0 0 6.36-2.62z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Интеграция сервисов</h3>
+                        <p>Объединение различных сервисов (платежи, карты, соцсети, CRM) в единую экосистему для бесшовной работы.</p>
+                        <div class="purpose-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">10M+</span>
+                                <span class="stat-label">интеграций</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">24/7</span>
+                                <span class="stat-label">доступность</span>
+                            </div>
+                        </div>
+                        <div class="purpose-tag">
+                            <span>CRM • ERP • CMS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="purpose-card glass-card" data-purpose="mobile">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                    <line x1="12" y1="18" x2="12" y2="18"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Мобильные приложения</h3>
+                        <p>Backend для мобильных приложений, обеспечивающий синхронизацию данных, push-уведомления и офлайн-режимы.</p>
+                        <div class="purpose-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">7B+</span>
+                                <span class="stat-label">запросов/день</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">2M+</span>
+                                <span class="stat-label">приложений</span>
+                            </div>
+                        </div>
+                        <div class="purpose-tag">
+                            <span>iOS • Android • Flutter</span>
+                        </div>
+                    </div>
+                    
+                    <div class="purpose-card glass-card" data-purpose="automation">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M2 12h4l3-9 3 18 3-9h4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Автоматизация</h3>
+                        <p>Автоматизация бизнес-процессов, CI/CD пайплайнов и DevOps практик через API для повышения эффективности.</p>
+                        <div class="purpose-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">60%</span>
+                                <span class="stat-label">экономии времени</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">3x</span>
+                                <span class="stat-label">скорость</span>
+                            </div>
+                        </div>
+                        <div class="purpose-tag">
+                            <span>CI/CD • RPA • DevOps</span>
+                        </div>
+                    </div>
+                    
+                    <div class="purpose-card glass-card" data-purpose="scalability">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2v4M12 22v-4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Масштабирование</h3>
+                        <p>API позволяет легко масштабировать приложения, добавлять новые функции и подключать дополнительные сервисы.</p>
+                        <div class="purpose-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">10x</span>
+                                <span class="stat-label">масштаб</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">99.99%</span>
+                                <span class="stat-label">uptime</span>
+                            </div>
+                        </div>
+                        <div class="purpose-tag">
+                            <span>Microservices • Serverless</span>
+                        </div>
+                    </div>
+                    
+                    <div class="purpose-card glass-card" data-purpose="security">
+                        <div class="card-glow"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L3 7v7c0 5 9 8 9 8s9-3 9-8V7l-9-5z"/>
+                                    <path d="M12 8v4M12 16h.01"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Безопасность</h3>
+                        <p>API обеспечивает единый контролируемый доступ к данным с аутентификацией, авторизацией и шифрованием.</p>
+                        <div class="purpose-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">256-bit</span>
+                                <span class="stat-label">шифрование</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">OAuth 2.0</span>
+                                <span class="stat-label">стандарт</span>
+                            </div>
+                        </div>
+                        <div class="purpose-tag">
+                            <span>JWT • SSL/TLS • OAuth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Реальные примеры использования -->
+            <div class="real-examples-section">
+                <div class="examples-header">
+                    <h2>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                        Реальные примеры использования
+                    </h2>
+                    <p class="examples-subtitle">Как ведущие компании используют API в своих продуктах</p>
+                </div>
+                
+                <div class="examples-scroll" id="examplesScroll">
+                    <div class="real-card" data-company="stripe">
+                        <div class="real-icon">💳</div>
+                        <div class="real-content">
+                            <h4>Stripe API</h4>
+                            <p>Обработка платежей для миллионов интернет-магазинов по всему миру</p>
+                            <div class="real-stats">
+                                <span>🔒 PCI DSS Level 1</span>
+                                <span>🌍 195+ стран</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="real-card" data-company="google">
+                        <div class="real-icon">🗺️</div>
+                        <div class="real-content">
+                            <h4>Google Maps API</h4>
+                            <p>Геолокация и маршруты в Uber, Airbnb, Delivery Club, Яндекс.Еда</p>
+                            <div class="real-stats">
+                                <span>📍 10M+ запросов/день</span>
+                                <span>🗺️ 200+ стран</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="real-card" data-company="twitter">
+                        <div class="real-icon">🐦</div>
+                        <div class="real-content">
+                            <h4>X (Twitter) API</h4>
+                            <p>Автоматический постинг, аналитика соцсетей и боты для брендов</p>
+                            <div class="real-stats">
+                                <span>📊 500M+ твитов/день</span>
+                                <span>🤖 100k+ ботов</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="real-card" data-company="paypal">
+                        <div class="real-icon">💰</div>
+                        <div class="real-content">
+                            <h4>PayPal API</h4>
+                            <p>Международные переводы, оплата подписок и массовые выплаты</p>
+                            <div class="real-stats">
+                                <span>💵 1.5B+ транзакций</span>
+                                <span>🌍 200+ рынков</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="real-card" data-company="openweather">
+                        <div class="real-icon">🌤️</div>
+                        <div class="real-content">
+                            <h4>OpenWeather API</h4>
+                            <p>Прогноз погоды для умных домов, приложений и бизнес-систем</p>
+                            <div class="real-stats">
+                                <span>📡 1B+ API вызовов/день</span>
+                                <span>🌡️ 4M+ городов</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="real-card" data-company="openai">
+                        <div class="real-icon">🤖</div>
+                        <div class="real-content">
+                            <h4>OpenAI API</h4>
+                            <p>GPT-4, DALL-E и Whisper для AI-приложений и чат-ботов</p>
+                            <div class="real-stats">
+                                <span>🧠 100M+ пользователей</span>
+                                <span>⚡ 1M+ запросов/час</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Статистика и инсайты -->
+            <div class="insights-section glass-card">
+                <div class="insights-header">
+                    <div class="insights-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4-3-9s1.34-9 3-9"/>
+                        </svg>
+                    </div>
+                    <h3>Ключевые инсайты</h3>
+                </div>
+                <div class="insights-grid">
+                    <div class="insight-item">
+                        <div class="insight-number">90%</div>
+                        <div class="insight-text">разработчиков используют API в своих проектах</div>
+                    </div>
+                    <div class="insight-divider"></div>
+                    <div class="insight-item">
+                        <div class="insight-number">83%</div>
+                        <div class="insight-text">веб-трафика приходится на API запросы</div>
+                    </div>
+                    <div class="insight-divider"></div>
+                    <div class="insight-item">
+                        <div class="insight-number">50k+</div>
+                        <div class="insight-text">публичных API доступно во всём мире</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижний индикатор -->
+        <div class="bottom-indicator">
+            <div class="indicator-text">API — двигатель цифровой экономики</div>
+            <div class="indicator-line"></div>
+        </div>
+    </div>
+    
+    <script src="../js/page3.js"></script>
+</body>
+</html>

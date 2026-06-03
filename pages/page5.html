@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API | Презентация</title>
+    <link rel="stylesheet" href="../css/page5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Световые акценты -->
+    <div class="light-accent accent-1"></div>
+    <div class="light-accent accent-2"></div>
+    <div class="light-accent accent-3"></div>
+    
+    <div class="page-container">
+        <!-- Верхняя навигация -->
+        <div class="page-nav">
+            <div class="page-number">05</div>
+            <div class="page-title">
+                <span class="title-icon">🔄</span>
+                <span>REST API</span>
+            </div>
+            <div class="page-progress">
+                <div class="progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основной контент -->
+        <div class="content-wrapper">
+            <!-- Заголовок -->
+            <div class="header-section">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>ARCHITECTURE STYLE</span>
+                </div>
+                <h1 class="main-title">
+                    <span class="gradient-text">REST</span> API
+                    <span class="title-cursor"></span>
+                </h1>
+                <p class="main-subtitle">Representational State Transfer — архитектурный стиль для построения веб-API</p>
+                <div class="title-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H5.78a1.65 1.65 0 0 0-1.51 1 1.65 1.65 0 0 0 .33 1.82l.04.04A10 10 0 0 0 12 17.66a10 10 0 0 0 6.36-2.62z"/>
+                        </svg>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <!-- Принципы REST -->
+            <div class="principles-section">
+                <div class="section-title-small">
+                    <span class="title-icon-small">📐</span>
+                    <h3>Основные принципы REST</h3>
+                </div>
+                <div class="principles-grid" id="principlesGrid">
+                    <div class="principle-card" data-principle="1">
+                        <div class="principle-number">01</div>
+                        <div class="principle-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h4>Клиент-Сервер</h4>
+                        <p>Разделение интерфейса и хранения данных для независимой эволюции</p>
+                    </div>
+                    
+                    <div class="principle-card" data-principle="2">
+                        <div class="principle-number">02</div>
+                        <div class="principle-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h4>Отсутствие состояния</h4>
+                        <p>Каждый запрос содержит всю необходимую информацию для обработки</p>
+                    </div>
+                    
+                    <div class="principle-card" data-principle="3">
+                        <div class="principle-number">03</div>
+                        <div class="principle-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16v16H4z"/>
+                                <path d="M9 8h6"/>
+                            </svg>
+                        </div>
+                        <h4>Кэширование</h4>
+                        <p>Ответы должны быть помечены как кэшируемые для повышения производительности</p>
+                    </div>
+                    
+                    <div class="principle-card" data-principle="4">
+                        <div class="principle-number">04</div>
+                        <div class="principle-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="2" width="20" height="20" rx="2"/>
+                                <path d="M7 7h3v3H7z"/>
+                                <path d="M14 7h3v3h-3z"/>
+                            </svg>
+                        </div>
+                        <h4>Единообразие интерфейса</h4>
+                        <p>Стандартизация методов, форматов и идентификаторов ресурсов</p>
+                    </div>
+                    
+                    <div class="principle-card" data-principle="5">
+                        <div class="principle-number">05</div>
+                        <div class="principle-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h4>Слои</h4>
+                        <p>Промежуточные серверы для балансировки нагрузки и безопасности</p>
+                    </div>
+                    
+                    <div class="principle-card" data-principle="6">
+                        <div class="principle-number">06</div>
+                        <div class="principle-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M2 12h4l3-9 3 18 3-9h4"/>
+                            </svg>
+                        </div>
+                        <h4>Код по требованию</h4>
+                        <p>Расширение функционала через загрузку исполняемого кода (опционально)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- HTTP Методы -->
+            <div class="methods-section">
+                <div class="section-title-small">
+                    <span class="title-icon-small">⚡</span>
+                    <h3>HTTP Методы REST API</h3>
+                </div>
+                <div class="methods-grid" id="methodsGrid">
+                    <div class="method-card method-get">
+                        <div class="method-header">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 12h16M12 4v16"/>
+                                </svg>
+                            </div>
+                            <span class="method-name">GET</span>
+                            <span class="method-badge">read</span>
+                        </div>
+                        <div class="method-description">
+                            Получение данных. Безопасный и идемпотентный метод
+                        </div>
+                        <div class="method-example">
+                            <code>GET /api/users/123</code>
+                            <code>GET /api/products?page=1</code>
+                        </div>
+                        <div class="method-response">
+                            <span class="response-badge">200 OK</span>
+                            <span class="response-badge">404 Not Found</span>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card method-post">
+                        <div class="method-header">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 4v16M4 12h16"/>
+                                </svg>
+                            </div>
+                            <span class="method-name">POST</span>
+                            <span class="method-badge">create</span>
+                        </div>
+                        <div class="method-description">
+                            Создание нового ресурса. Не идемпотентный метод
+                        </div>
+                        <div class="method-example">
+                            <code>POST /api/users</code>
+                            <code>{ "name": "John", "email": "john@ex.com" }</code>
+                        </div>
+                        <div class="method-response">
+                            <span class="response-badge">201 Created</span>
+                            <span class="response-badge">400 Bad Request</span>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card method-put">
+                        <div class="method-header">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"/>
+                                    <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/>
+                                </svg>
+                            </div>
+                            <span class="method-name">PUT</span>
+                            <span class="method-badge">update</span>
+                        </div>
+                        <div class="method-description">
+                            Полное обновление ресурса. Идемпотентный метод
+                        </div>
+                        <div class="method-example">
+                            <code>PUT /api/users/123</code>
+                            <code>{ "name": "John", "email": "new@ex.com" }</code>
+                        </div>
+                        <div class="method-response">
+                            <span class="response-badge">200 OK</span>
+                            <span class="response-badge">204 No Content</span>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card method-patch">
+                        <div class="method-header">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 4v16M4 12h16"/>
+                                    <path d="M18 2l4 4-4 4"/>
+                                </svg>
+                            </div>
+                            <span class="method-name">PATCH</span>
+                            <span class="method-badge">partial update</span>
+                        </div>
+                        <div class="method-description">
+                            Частичное обновление ресурса. Не идемпотентный
+                        </div>
+                        <div class="method-example">
+                            <code>PATCH /api/users/123</code>
+                            <code>{ "email": "new@ex.com" }</code>
+                        </div>
+                        <div class="method-response">
+                            <span class="response-badge">200 OK</span>
+                            <span class="response-badge">204 No Content</span>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card method-delete">
+                        <div class="method-header">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="3 6 5 6 21 6"/>
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                    <line x1="10" y1="11" x2="10" y2="17"/>
+                                    <line x1="14" y1="11" x2="14" y2="17"/>
+                                </svg>
+                            </div>
+                            <span class="method-name">DELETE</span>
+                            <span class="method-badge">delete</span>
+                        </div>
+                        <div class="method-description">
+                            Удаление ресурса. Идемпотентный метод
+                        </div>
+                        <div class="method-example">
+                            <code>DELETE /api/users/123</code>
+                        </div>
+                        <div class="method-response">
+                            <span class="response-badge">200 OK</span>
+                            <span class="response-badge">204 No Content</span>
+                            <span class="response-badge">404 Not Found</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Интерактивная демонстрация REST -->
+            <div class="demo-section glass-card">
+                <div class="demo-header">
+                    <div class="demo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                    </div>
+                    <span>Интерактивная демонстрация REST API</span>
+                    <div class="demo-badge">
+                        <span class="badge-dot"></span>
+                        Выбери метод
+                    </div>
+                </div>
+                
+                <div class="demo-api">
+                    <div class="api-info">
+                        <div class="api-info-icon">📡</div>
+                        <div class="api-info-text">
+                            <strong>Тестовое REST API</strong>
+                            <span>JSONPlaceholder — бесплатный фиктивный REST API для тестирования</span>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-controls">
+                        <div class="method-selector">
+                            <button class="rest-method-btn active" data-rest-method="GET">GET</button>
+                            <button class="rest-method-btn" data-rest-method="POST">POST</button>
+                            <button class="rest-method-btn" data-rest-method="PUT">PUT</button>
+                            <button class="rest-method-btn" data-rest-method="PATCH">PATCH</button>
+                            <button class="rest-method-btn" data-rest-method="DELETE">DELETE</button>
+                        </div>
+                        
+                        <div class="endpoint-input">
+                            <span class="endpoint-label">URL:</span>
+                            <input type="text" class="endpoint-field" id="restEndpoint" value="https://jsonplaceholder.typicode.com/posts/1">
+                        </div>
+                        
+                        <div class="body-input" id="requestBodyContainer" style="display: none;">
+                            <span class="body-label">Body (JSON):</span>
+                            <textarea class="body-field" id="requestBody" rows="3" placeholder='{
+  "title": "foo",
+  "body": "bar",
+  "userId": 1
+}'></textarea>
+                        </div>
+                        
+                        <button class="send-rest-btn" id="sendRestRequest">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                            Отправить REST запрос
+                        </button>
+                    </div>
+                    
+                    <div class="rest-response-area">
+                        <div class="rest-response-header">
+                            <div class="rest-status" id="restStatus">
+                                <span class="status-dot"></span>
+                                Ожидание запроса
+                            </div>
+                            <div class="rest-timing" id="restTiming"></div>
+                        </div>
+                        <div class="rest-response-body" id="restResponseBody">
+                            <div class="placeholder-content">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 8v4l3 3"/>
+                                </svg>
+                                <p>Нажмите "Отправить REST запрос", чтобы увидеть ответ</p>
+                                <small>Пример REST API с реальными данными</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижний индикатор -->
+        <div class="bottom-indicator">
+            <div class="indicator-text">REST — стандарт для веб-API</div>
+            <div class="indicator-line"></div>
+        </div>
+    </div>
+    
+    <script src="../js/page5.js"></script>
+</body>
+</html>

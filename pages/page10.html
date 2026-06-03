@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заключение | Презентация</title>
+    <link rel="stylesheet" href="../css/page10.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Световые акценты -->
+    <div class="light-accent accent-1"></div>
+    <div class="light-accent accent-2"></div>
+    <div class="light-accent accent-3"></div>
+    
+    <!-- Конфетти контейнер -->
+    <div class="confetti-container" id="confettiContainer"></div>
+    
+    <div class="page-container">
+        <!-- Верхняя навигация -->
+        <div class="page-nav">
+            <div class="page-number">10</div>
+            <div class="page-title">
+                <span class="title-icon">🎯</span>
+                <span>Заключение</span>
+            </div>
+            <div class="page-progress">
+                <div class="progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основной контент -->
+        <div class="content-wrapper">
+            <!-- Заголовок -->
+            <div class="header-section">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>CONCLUSION</span>
+                </div>
+                <h1 class="main-title">
+                    <span class="gradient-text">Заключение</span>
+                    <span class="title-cursor"></span>
+                </h1>
+                <p class="main-subtitle">Подведем итоги нашего путешествия в мир API</p>
+                <div class="title-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <!-- Итоговые карточки -->
+            <div class="summary-cards" id="summaryCards">
+                <div class="summary-card glass-card" data-card="api">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">🔌</div>
+                    </div>
+                    <h3>API</h3>
+                    <p>Фундамент современной веб-разработки, обеспечивающий взаимодействие между сервисами и приложениями. API делает возможным интеграцию, автоматизацию и масштабирование.</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">50k+</span>
+                            <span class="stat-label">публичных API</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">83%</span>
+                            <span class="stat-label">веб-трафика</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-card glass-card" data-card="drf">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">🐍</div>
+                    </div>
+                    <h3>Django REST Framework</h3>
+                    <p>Мощное решение для enterprise-проектов с богатым функционалом, встроенной админкой, ORM и зрелым сообществом. Идеален для быстрой разработки.</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">30k+</span>
+                            <span class="stat-label">GitHub ★</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">8k+</span>
+                            <span class="stat-label">компаний</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-card glass-card" data-card="fastapi">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">⚡</div>
+                    </div>
+                    <h3>FastAPI</h3>
+                    <p>Современный асинхронный фреймворк для высокопроизводительных API и микросервисов. Автоматическая документация и валидация из коробки.</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">70k+</span>
+                            <span class="stat-label">GitHub ★</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">40k</span>
+                            <span class="stat-label">req/sec</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ключевые выводы -->
+            <div class="key-takeaways glass-card">
+                <div class="takeaways-header">
+                    <div class="takeaways-icon">💡</div>
+                    <h3>Ключевые выводы</h3>
+                    <span class="takeaways-badge">Main insights</span>
+                </div>
+                <div class="takeaways-grid">
+                    <div class="takeaway-item">
+                        <div class="takeaway-number">01</div>
+                        <div class="takeaway-content">
+                            <h4>API — это мост</h4>
+                            <p>API соединяет приложения, сервисы и данные, создавая единую экосистему для бизнеса и разработки.</p>
+                        </div>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-number">02</div>
+                        <div class="takeaway-content">
+                            <h4>REST — стандарт индустрии</h4>
+                            <p>REST API стал основным архитектурным стилем для веб-сервисов благодаря простоте и масштабируемости.</p>
+                        </div>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-number">03</div>
+                        <div class="takeaway-content">
+                            <h4>DRF для Enterprise</h4>
+                            <p>Django REST Framework — выбор для крупных проектов с богатой бизнес-логикой и требованиями к безопасности.</p>
+                        </div>
+                    </div>
+                    <div class="takeaway-item">
+                        <div class="takeaway-number">04</div>
+                        <div class="takeaway-content">
+                            <h4>FastAPI для High-load</h4>
+                            <p>FastAPI — идеальный выбор для микросервисов, real-time приложений и высоконагруженных API.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Цитата -->
+            <div class="quote-section glass-card">
+                <div class="quote-icon">“</div>
+                <p class="quote-text">Выбор между DRF и FastAPI зависит от требований к производительности, размера команды и архитектурных предпочтений. Оба инструмента достойны внимания и имеют свою нишу в современной веб-разработке.</p>
+                <div class="quote-author">— Итог презентации</div>
+            </div>
+            
+            <!-- Благодарность -->
+            <div class="thankyou-section">
+                <div class="thankyou-card">
+                    <div class="thankyou-icon">🙏</div>
+                    <h2>Спасибо за внимание!</h2>
+                    <p>Вопросы и обсуждение приветствуются</p>
+                    <div class="thankyou-buttons">
+                        <button class="thankyou-btn" id="restartBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            Начать сначала
+                        </button>
+                        <button class="thankyou-btn" id="celebrateBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                            Отпраздновать 🎉
+                        </button>
+                    </div>
+                    <div class="thankyou-footer">
+                        <span>Презентация подготовлена для команды разработки</span>
+                        <span class="year">2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижний индикатор -->
+        <div class="bottom-indicator">
+            <div class="indicator-text">Конец презентации • Спасибо!</div>
+            <div class="indicator-line"></div>
+        </div>
+    </div>
+    
+    <script src="../js/page10.js"></script>
+</body>
+</html>

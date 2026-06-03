@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI | Презентация</title>
+    <link rel="stylesheet" href="../css/page8.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Световые акценты -->
+    <div class="light-accent accent-1"></div>
+    <div class="light-accent accent-2"></div>
+    <div class="light-accent accent-3"></div>
+    
+    <div class="page-container">
+        <!-- Верхняя навигация -->
+        <div class="page-nav">
+            <div class="page-number">08</div>
+            <div class="page-title">
+                <span class="title-icon">⚡</span>
+                <span>FastAPI</span>
+            </div>
+            <div class="page-progress">
+                <div class="progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Основной контент -->
+        <div class="content-wrapper">
+            <!-- Заголовок -->
+            <div class="header-section">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                    <span>MODERN & FAST</span>
+                </div>
+                <h1 class="main-title">
+                    <span class="gradient-text">FastAPI</span>
+                    <span class="title-cursor"></span>
+                </h1>
+                <p class="main-subtitle">Современный, быстрый (высокопроизводительный) веб-фреймворк для создания API на Python 3.6+</p>
+                <div class="title-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <!-- Главная карточка FastAPI -->
+            <div class="hero-card glass-card">
+                <div class="hero-badge">
+                    <span class="lightning">⚡</span>
+                    <span>В 2-3 раза быстрее Flask</span>
+                </div>
+                <div class="hero-content">
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="stat-value" data-target="70000">0</div>
+                            <div class="stat-label">GitHub Stars</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-value" data-target="40000">0</div>
+                            <div class="stat-label">Запросов/сек</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-value" data-target="100">0</div>
+                            <div class="stat-label">% Type Hints</div>
+                        </div>
+                    </div>
+                    <div class="hero-desc">
+                        <p>FastAPI — один из самых быстрых Python-фреймворков, благодаря Starlette (асинхронность) и Pydantic (валидация). Автоматическая документация Swagger UI и ReDoc генерируется из коробки.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ключевые возможности -->
+            <div class="features-section">
+                <div class="section-title-small">
+                    <span class="title-icon-small">🚀</span>
+                    <h3>Ключевые возможности FastAPI</h3>
+                </div>
+                <div class="features-grid" id="featuresGrid">
+                    <div class="feature-card" data-feature="speed">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">⚡</div>
+                        </div>
+                        <h4>Высокая производительность</h4>
+                        <p>Один из самых быстрых Python-фреймворков, сравнимый с NodeJS и Go</p>
+                        <div class="feature-metric">~40,000 запросов/сек</div>
+                    </div>
+                    
+                    <div class="feature-card" data-feature="async">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">🔄</div>
+                        </div>
+                        <h4>Асинхронность</h4>
+                        <p>Нативная поддержка async/await для высоконагруженных I/O операций</p>
+                        <div class="feature-metric">async def | await</div>
+                    </div>
+                    
+                    <div class="feature-card" data-feature="docs">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">📚</div>
+                        </div>
+                        <h4>Автоматическая документация</h4>
+                        <p>Интерактивная документация Swagger UI и ReDoc генерируется автоматически</p>
+                        <div class="feature-metric">/docs | /redoc</div>
+                    </div>
+                    
+                    <div class="feature-card" data-feature="validation">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">✅</div>
+                        </div>
+                        <h4>Валидация данных</h4>
+                        <p>Pydantic обеспечивает автоматическую валидацию, сериализацию и документацию</p>
+                        <div class="feature-metric">Type Hints</div>
+                    </div>
+                    
+                    <div class="feature-card" data-feature="dependency">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">🔌</div>
+                        </div>
+                        <h4>Dependency Injection</h4>
+                        <p>Мощная система внедрения зависимостей из коробки</p>
+                        <div class="feature-metric">DI System</div>
+                    </div>
+                    
+                    <div class="feature-card" data-feature="security">
+                        <div class="feature-icon-wrapper">
+                            <div class="feature-icon">🔐</div>
+                        </div>
+                        <h4>Безопасность</h4>
+                        <p>Встроенная поддержка OAuth2, JWT, CORS, HTTPS и других методов защиты</p>
+                        <div class="feature-metric">OAuth2 | JWT</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Пример кода FastAPI -->
+            <div class="code-section glass-card">
+                <div class="code-header">
+                    <div class="code-title">
+                        <span class="code-icon">📝</span>
+                        <span>Минимальное API на FastAPI</span>
+                    </div>
+                    <button class="copy-code-btn" id="copyFastApiCode">Копировать код</button>
+                </div>
+                <div class="code-container">
+                    <pre class="code-block"><code>from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import Optional
+
+# Создание экземпляра приложения
+app = FastAPI(
+    title="My API",
+    description="Пример API на FastAPI",
+    version="1.0.0"
+)
+
+# Модель данных с валидацией
+class User(BaseModel):
+    id: int
+    name: str
+    email: str
+    age: Optional[int] = None
+
+# In-memory база данных
+users_db = {}
+
+# GET запрос
+@app.get("/")
+def read_root():
+    return {"message": "Hello World"}
+
+# GET запрос с параметром
+@app.get("/users/{user_id}")
+def get_user(user_id: int):
+    if user_id not in users_db:
+        raise HTTPException(status_code=404, detail="User not found")
+    return users_db[user_id]
+
+# POST запрос
+@app.post("/users")
+def create_user(user: User):
+    users_db[user.id] = user
+    return {"status": "created", "user": user}
+
+# PUT запрос
+@app.put("/users/{user_id}")
+def update_user(user_id: int, user: User):
+    users_db[user_id] = user
+    return {"status": "updated", "user": user}
+
+# DELETE запрос
+@app.delete("/users/{user_id}")
+def delete_user(user_id: int):
+    if user_id not in users_db:
+        raise HTTPException(status_code=404, detail="User not found")
+    del users_db[user_id]
+    return {"status": "deleted"}</code></pre>
+                </div>
+            </div>
+            
+            <!-- Интерактивная демонстрация -->
+            <div class="demo-section glass-card">
+                <div class="demo-header">
+                    <div class="demo-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                    </div>
+                    <span>Интерактивная демонстрация FastAPI</span>
+                    <div class="demo-badge">
+                        <span class="badge-dot"></span>
+                        Тестируй API
+                    </div>
+                </div>
+                
+                <div class="demo-api">
+                    <div class="api-info">
+                        <div class="api-info-icon">🚀</div>
+                        <div class="api-info-text">
+                            <strong>Тестовое FastAPI приложение</strong>
+                            <span>Демонстрация работы с пользователями через REST API</span>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-controls">
+                        <div class="method-selector">
+                            <button class="fastapi-method-btn active" data-method="GET">GET</button>
+                            <button class="fastapi-method-btn" data-method="POST">POST</button>
+                            <button class="fastapi-method-btn" data-method="PUT">PUT</button>
+                            <button class="fastapi-method-btn" data-method="DELETE">DELETE</button>
+                        </div>
+                        
+                        <div class="endpoint-input">
+                            <span class="endpoint-label">Endpoint:</span>
+                            <select class="endpoint-select" id="fastapiEndpoint">
+                                <option value="/">GET /</option>
+                                <option value="/users/1">GET /users/{id}</option>
+                                <option value="/users" id="postOption">POST /users</option>
+                                <option value="/users/1" id="putOption">PUT /users/{id}</option>
+                                <option value="/users/1" id="deleteOption">DELETE /users/{id}</option>
+                            </select>
+                        </div>
+                        
+                        <div class="body-input" id="fastapiBodyContainer" style="display: none;">
+                            <span class="body-label">Body (JSON):</span>
+                            <textarea class="body-field" id="fastapiRequestBody" rows="4" placeholder='{
+  "id": 1,
+  "name": "Иван Петров",
+  "email": "ivan@example.com",
+  "age": 25
+}'></textarea>
+                        </div>
+                        
+                        <button class="send-fastapi-btn" id="sendFastapiRequest">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                            Отправить запрос
+                        </button>
+                    </div>
+                    
+                    <div class="fastapi-response-area">
+                        <div class="fastapi-response-header">
+                            <div class="fastapi-status" id="fastapiStatus">
+                                <span class="status-dot"></span>
+                                Ожидание запроса
+                            </div>
+                            <div class="fastapi-timing" id="fastapiTiming"></div>
+                        </div>
+                        <div class="fastapi-response-body" id="fastapiResponseBody">
+                            <div class="placeholder-content">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 8v4l3 3"/>
+                                </svg>
+                                <p>Нажмите "Отправить запрос", чтобы протестировать FastAPI</p>
+                                <small>Симуляция работы реального FastAPI приложения</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Сравнение производительности -->
+            <div class="benchmark-section glass-card">
+                <div class="benchmark-header">
+                    <div class="benchmark-icon">📊</div>
+                    <h3>Бенчмарки производительности</h3>
+                    <span class="benchmark-badge">requests/sec</span>
+                </div>
+                <div class="benchmark-chart">
+                    <div class="benchmark-item">
+                        <div class="benchmark-name">FastAPI</div>
+                        <div class="benchmark-bar">
+                            <div class="bar-fill" style="width: 100%;"></div>
+                            <span class="bar-value">~40,000</span>
+                        </div>
+                    </div>
+                    <div class="benchmark-item">
+                        <div class="benchmark-name">Flask</div>
+                        <div class="benchmark-bar">
+                            <div class="bar-fill" style="width: 35%; background: linear-gradient(90deg, #f59e0b, #f97316);"></div>
+                            <span class="bar-value">~14,000</span>
+                        </div>
+                    </div>
+                    <div class="benchmark-item">
+                        <div class="benchmark-name">Django</div>
+                        <div class="benchmark-bar">
+                            <div class="bar-fill" style="width: 30%; background: linear-gradient(90deg, #10b981, #34d399);"></div>
+                            <span class="bar-value">~12,000</span>
+                        </div>
+                    </div>
+                    <div class="benchmark-item">
+                        <div class="benchmark-name">Node.js (Express)</div>
+                        <div class="benchmark-bar">
+                            <div class="bar-fill" style="width: 85%; background: linear-gradient(90deg, #06b6d4, #22d3ee);"></div>
+                            <span class="bar-value">~34,000</span>
+                        </div>
+                    </div>
+                    <div class="benchmark-item">
+                        <div class="benchmark-name">Go (Gin)</div>
+                        <div class="benchmark-bar">
+                            <div class="bar-fill" style="width: 110%; background: linear-gradient(90deg, #ec4899, #f472b6);"></div>
+                            <span class="bar-value">~50,000+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="benchmark-note">
+                    <span>💡</span>
+                    <span>FastAPI показывает результат ~40,000 запросов/сек, что делает его одним из самых быстрых Python-фреймворков</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Нижний индикатор -->
+        <div class="bottom-indicator">
+            <div class="indicator-text">FastAPI — будущее веб-разработки на Python</div>
+            <div class="indicator-line"></div>
+        </div>
+    </div>
+    
+    <script src="../js/page8.js"></script>
+</body>
+</html>
